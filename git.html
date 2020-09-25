@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny Baggins Coding Notes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<u><h1>GIT NOTES</h1></u>
+
+<p class="pmajor">1) Link de download do git: <a href="https://git-scm.com/download/win" target="_blank">Git Download</a>.
+Checar versão <strong>[git --version]</strong></p>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">2) Comandos de configuração do Git:</p>
+<ul>
+    <strong>
+        <li>git config --global user.name "username"</li>
+        <li>git config --global user.email "user@email.com"</li>
+        <li>git config --global core.editor "editor" <small>!important1</small></li>
+    </strong>
+</ul>
+
+<p> <small>!important1</small> - Para configurar o <strong>vscode</strong> como editor padrão utilizado pelo Git, serão necessárias
+    algumas configurações adicionais: </p>
+<ul>
+    <strong>
+        <li>git config --global core.editor "code --wait"</li>
+        <li>git config --global -e</li>
+    </strong>
+    <p>Após abrir o arquivo de configuração do git, adicionar as seguintes linhas: </p>
+        <strong>
+            <li>[diff]</li>
+            <ul>
+                <li>tool = default-difftool</li>
+            </ul>
+            <li>[difftool "default-difftool"]</li>
+            <ul>
+                <li> cmd = code --wait --diff $LOCAL $REMOTE</li>
+            </ul>
+        </strong>
+</ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">3) Iniciando o projeto no git</p>
+<ul>
+    <strong>
+        <li>git init <small class="tips">(cria um repositório em .git)</small></li>
+    </strong>
+</ul>
+<p>Status dos arquivos no diretório e no repositório:</p>
+    <ul>
+        <strong>
+            <li>untracked: <small class="tips">arquivos fora do repositório</small></li>
+            <li>unmodified: <small class="tips">adicionado ao repositório, mas não modificado</small></li>
+            <li>modified: <small class="tips">modificados dentro do repositório</small></li>
+            <li>staged: <small class="tips">modificados, readicionados e prontos para serem commitados</small></li>
+        </strong>
+    </ul>
+<p>Adicionando ao repositório (staged)</p>
+    <ul>
+        <strong>
+            <li>git add file.ext</li>
+        </strong>
+    </ul>
+<p>Commitando projeto</p>
+    <ul>
+        <strong>
+            <li>git commit -m "Descrição do tipo de modificação realizada no projeto"</li>        
+            <li>git commit -am <small class="tips">(commita todos arquivos modificados e adiciona msg)</small></li>        
+        </strong>
+    </ul>
+<p>Visualizando o Status do repositório</p>
+    <ul>
+        <strong>
+            <li>git status</li>        
+        </strong>
+    </ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">3) Visualizando logs</p>
+<p>Mostra todas as modificações realizadas no repositório.</p>
+    <ul>
+        <strong>
+            <li>git log</li>
+            <li>git shortlog</li>
+            <li>git shortlog -sn  <small class="tips">(mostra somente nº de commits e author)</small></li>
+            <li>git log --graph <small class="tips">(gráfico de branchs)</small></li>   
+            <li>git show "hash" <small class="tips">(mostra os detalhes que foram recentemente add)</small></li>
+            <li>git diff <small class="tips">(mostra atualizações antes de commitar)</small></li>  
+            <li>git diff --name-only <small class="tips">(mostra somente arquivos modificados)</small></li>  
+        </strong>
+    </ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">4) Fazendo alterações e desfazendo ações no repositório</p>
+    <ul>
+        <strong>
+            <li>git checkout file.ext  <small class="tips">(desfaz alterações nos arquivos unstaged)</small></li>
+            <li>git reset HEAD file.ext <small class="tips">(retira arquivos staged e permite aplicar checkout após o processo)</small></li>   
+            <li>git reset --soft "penultimaHashCommitada" <small class="tips">(retorna ao penúltimo commit e coloca o último de volta em staged)</small></li>
+            <li>git reset --mixed "penultimaHashCommitada" <small class="tips">(retorna ao penúltimo commit e coloca o último em modified)</small></li>  
+            <li>git reset --hard "penultimaHashCommitada" <small class="tips">(desfaz todas as alterações do último commit)</small></li>  
+        </strong>
+    </ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">5) Conectando Git ao GitHub utilizando SSH</p>
+    <p>Gerando a chave pública de acesso</p>
+    <ul>
+        <strong>
+            <li>ssh-keygen -t rsa -b 4096 -C "user@email.com" <small class="tips">(no prompt de comando)</small></li>
+            <li>Coloca a chave gerada no link SSH and GPG keys do github.</li>
+        </strong>
+    </ul>
+    <p>Conectando repositório local ao remoto</p>
+    <ul>
+        <strong>
+            <li>git remote add origin "userongithub" <small class="tips">(repositórios com o mesmo nome)</small></li>
+            <li>git push -u origin master <small class="tips">(envia tudo do local pro remoto)</small></li>
+        </strong>
+    </ul>
+
+   

@@ -1,0 +1,7 @@
+<ul>
+    <strong>
+        <li></li>
+    </strong>
+</ul>
+
+<small class="tips"></small>
