@@ -49,16 +49,26 @@ Checar versão <strong>[git --version]</strong></p>
 <p class="pmajor">3) Iniciando o projeto no git</p>
 <ul>
     <strong>
-        <li>git init <small class="tips">(cria um repositório em .git)</small></li>
+        <li>git init 
+            <small class="tips">(cria um repositório em .git)</small>
+        </li>
     </strong>
 </ul>
 <p>Status dos arquivos no diretório e no repositório:</p>
     <ul>
         <strong>
-            <li>untracked: <small class="tips">arquivos fora do repositório</small></li>
-            <li>unmodified: <small class="tips">adicionado ao repositório, mas não modificado</small></li>
-            <li>modified: <small class="tips">modificados dentro do repositório</small></li>
-            <li>staged: <small class="tips">modificados, readicionados e prontos para serem commitados</small></li>
+            <li>untracked: 
+                <small class="tips">arquivos fora do repositório</small>
+            </li>
+            <li>unmodified: 
+                <small class="tips">adicionado ao repositório, mas não modificado</small>
+            </li>
+            <li>modified: 
+                <small class="tips">modificados dentro do repositório</small>
+            </li>
+            <li>staged: 
+                <small class="tips">modificados, readicionados e prontos para serem commitados</small>
+            </li>
         </strong>
     </ul>
 <p>Adicionando ao repositório (staged)</p>
@@ -71,7 +81,9 @@ Checar versão <strong>[git --version]</strong></p>
     <ul>
         <strong>
             <li>git commit -m "Descrição do tipo de modificação realizada no projeto"</li>        
-            <li>git commit -am <small class="tips">(commita todos arquivos modificados e adiciona msg)</small></li>        
+            <li>git commit -am 
+                <small class="tips">(commita todos arquivos modificados e adiciona msg)</small>
+            </li>        
         </strong>
     </ul>
 <p>Visualizando o Status do repositório</p>
@@ -89,11 +101,21 @@ Checar versão <strong>[git --version]</strong></p>
         <strong>
             <li>git log</li>
             <li>git shortlog</li>
-            <li>git shortlog -sn  <small class="tips">(mostra somente nº de commits e author)</small></li>
-            <li>git log --graph <small class="tips">(gráfico de branchs)</small></li>   
-            <li>git show "hash" <small class="tips">(mostra os detalhes que foram recentemente add)</small></li>
-            <li>git diff <small class="tips">(mostra atualizações antes de commitar)</small></li>  
-            <li>git diff --name-only <small class="tips">(mostra somente arquivos modificados)</small></li>  
+            <li>git shortlog -sn  
+                <small class="tips">(mostra somente nº de commits e author)</small>
+            </li>
+            <li>git log --graph 
+                <small class="tips">(gráfico de branchs)</small>
+            </li>   
+            <li>git show "hash" 
+                <small class="tips">(mostra os detalhes que foram recentemente add)</small>
+            </li>
+            <li>git diff 
+                <small class="tips">(mostra atualizações antes de commitar)</small>
+            </li>  
+            <li>git diff --name-only 
+                <small class="tips">(mostra somente arquivos modificados)</small>
+            </li>  
         </strong>
     </ul>
 
@@ -102,11 +124,21 @@ Checar versão <strong>[git --version]</strong></p>
 <p class="pmajor">4) Fazendo alterações e desfazendo ações no repositório</p>
     <ul>
         <strong>
-            <li>git checkout file.ext  <small class="tips">(desfaz alterações nos arquivos unstaged)</small></li>
-            <li>git reset HEAD file.ext <small class="tips">(retira arquivos staged e permite aplicar checkout após o processo)</small></li>   
-            <li>git reset --soft "penultimaHashCommitada" <small class="tips">(retorna ao penúltimo commit e coloca o último de volta em staged)</small></li>
-            <li>git reset --mixed "penultimaHashCommitada" <small class="tips">(retorna ao penúltimo commit e coloca o último em modified)</small></li>  
-            <li>git reset --hard "penultimaHashCommitada" <small class="tips">(desfaz todas as alterações do último commit)</small></li>  
+            <li>git checkout file.ext  
+                <small class="tips">(desfaz alterações nos arquivos unstaged)</small>
+            </li>
+            <li>git reset HEAD file.ext 
+                <small class="tips">(retira arquivos staged e permite aplicar checkout após o processo)</small>
+            </li>   
+            <li>git reset --soft "penultimaHashCommitada" 
+                <small class="tips">(retorna ao penúltimo commit e coloca o último de volta em staged)</small>
+            </li>
+            <li>git reset --mixed "penultimaHashCommitada" 
+                <small class="tips">(retorna ao penúltimo commit e coloca o último em modified)</small>
+            </li>  
+            <li>git reset --hard "penultimaHashCommitada" 
+                <small class="tips">(desfaz todas as alterações do último commit)</small>
+            </li>  
         </strong>
     </ul>
 
@@ -116,17 +148,27 @@ Checar versão <strong>[git --version]</strong></p>
     <p>Gerando a chave pública de acesso</p>
     <ul>
         <strong>
-            <li>ssh-keygen -t rsa -b 4096 -C "user@email.com" <small class="tips">(no prompt de comando)</small></li>
+            <li>ssh-keygen -t rsa -b 4096 -C "user@email.com" 
+                <small class="tips">(no prompt de comando)</small>
+            </li>
             <li>Coloca a chave gerada no link SSH and GPG keys do github.</li>
         </strong>
     </ul>
     <p>Conectando repositório local ao remoto</p>
     <ul>
         <strong>
-            <li>git remote add origin "userongithub" <small class="tips">(repositórios com o mesmo nome)</small></li>
-            <li>git push -u origin master <small class="tips">(envia tudo do local pro remoto. necessário commit de todo repositório)</small></li>
-            <li>git remote -v <small class="tips">(informações do repositório remoto)</small></li>
-            <li>git push origin master <small class="tips">(atualiza repositorio remoto no branch especificado)</small></li>
+            <li>git remote add origin "userongithub" 
+                <small class="tips">(repositórios com o mesmo nome)</small>
+            </li>
+            <li>git push -u origin master 
+                <small class="tips">(envia tudo do local pro remoto. necessário commit de todo repositório)</small>
+            </li>
+            <li>git remote -v 
+                <small class="tips">(informações do repositório remoto)</small>
+            </li>
+            <li>git push origin master 
+                <small class="tips">(atualiza repositorio remoto no branch especificado)</small>
+            </li>
         </strong>
     </ul>
     <p>Clonando o repositório</p>
@@ -141,9 +183,76 @@ Checar versão <strong>[git --version]</strong></p>
 <p class="pmajor">6) Trabalhando com Branchs</p>
     <ul>
         <strong>
-            <li>git checkout -b nomedobranch <small class="tips">(cria e ja modifica o ponteiro para o novo branch)</small></li>
-            <li>git branch <small class="tips">(lista os branchs e mostra qual está em uso)</small></li>
-            <li>git checkout nomedobranch <small class="tips">(alterna o uso para outro branch)</small></li>
-            <li>git branch -D nomedobranch <small class="tips">(deleta um branch)</small></li>
+            <li>git checkout -b nomedobranch 
+                <small class="tips">(cria e ja modifica o ponteiro para o novo branch)</small>
+            </li>
+            <li>git branch 
+                <small class="tips">(lista os branchs e mostra qual está em uso)</small>
+            </li>
+            <li>git checkout nomedobranch 
+                <small class="tips">(alterna o uso para outro branch)</small>
+            </li>
+            <li>git branch -D nomedobranch 
+                <small class="tips">(deleta um branch)</small>
+            </li>
         </strong>
     </ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">7) .gitignore</p>
+    <ul>
+        <strong>
+            <li>Cria um arquivo .gitignore no repositório</li>
+            <li>Adiciona os arquivos que não serão trackeados ou a extensão dos arquivos
+                 <small class="tips">(ex: *.xls , nomes.json)</small>
+            </li>
+        </strong>
+    </ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">8) Outros comandos importantes</p>
+    <h5>STASH</h5>
+    <ul>
+        <strong>
+            <li>git stash 
+                <small class="tips">(deixa arquivos modified em standby - WIP (work in progress))</small>
+            </li>
+            <li>git stash apply
+                <small class="tips">(aplica as mudanças que estavam em standby)</small>
+            </li>
+            <li>git stash list
+                <small class="tips">(lista tudo que tá em stash)</small>
+            </li>
+            <li>git stash clear
+                <small class="tips">(limpa o stash)</small>
+            </li>
+        </strong>
+    </ul>
+
+    <h5>ALIAS</h5>
+    <ul>
+        <strong>
+            <li>git config --global alias.nomeDoAlias comandoAlvo
+                <small class="tips">(ex: git config --global alias.s status)</small>
+            </li>
+        </strong>
+    </ul>
+
+    <h5>TAGS</h5>
+    <ul>
+        <p>Procedimento realizado após cada novo push para o github</p>
+        <strong>
+            <li>git tag -a versaoDaTag -m "descDaTag"
+                <small class="tips">(git tag -a 1.0.0 -m "Primeiro release.")</small>
+            </li>
+            <li>git push origin master --tags
+                <small class="tips">(push das tags)</small>
+            </li>
+            <li>git tags
+                <small class="tips">(lista todas as tags)</small>
+            </li>
+        </strong>
+    </ul>
+    
