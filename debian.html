@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny Baggins Coding Notes | DEBIAN GUIDE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<u><h1>DEBIAN GUIDE</h1></u> <a href="index.html">Voltar para Home</a>
+
+<p class="pmajor"># - Materiais de apoio</p>
+    <a href="http://dannybaggins.com.br/downloads/Linux_TheTextBook.pdf" 
+    download="Linux_TheTextBook.pdf">Linux The Textbook PDF</a>
+<br>
+<br>
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">1) Procedimentos pós install Debian</p>
+<ul>
+    <strong>
+        <li>sudo nano /etc/apt/sources.list 
+            <small class="tips">main contrib non-free</small>
+        </li>
+        <li>sudo apt update </li>
+        <li>sudo apt install ttf-mscorefonts-installer
+            <small class="tips">main contrib non-free</small>
+        </li>
+        <li>sudo nano /etc/apt/sources.list</li>
+        <ul>
+            <small>
+                <li>#latest security updates</li>
+                <li> deb http://security.debian.org/ stretch/updates main contrib non-free</li>
+            </small>
+        </ul>
+        <li>sudo apt update && sudo apt upgrade</li>
+        <li>apt-get install net-tools -y</li>
+    </strong>
+</ul>
+
+<hr><!-- DIVISOR DE ITENS -->
+
+<p class="pmajor">1) Instalando o webmin</p>
+<ul>
+    <strong>
+        <li>apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl
+            apt-show-versions python
+        </li>
+        <li>sudo nano /etc/apt/sources.list</li>
+        <ul>
+            <small>
+                <li>#Webmin</li>
+                <li> deb https://download.webmin.com/download/repository sarge contrib </li>
+            </small>
+        </ul>
+        <li>wget http://www.webmin.com/jcameron-key.asc
+            <small class="tips">(adiciona as chaves do webmin)</small>
+        </li>
+        <li>apt-key add jcameron-key.asc</li>
+        <li>apt-get install apt-transport-https
+            <small class="tips">(install dependencies)</small>
+        </li>
+        <li>apt-get update</li>
+        <li>apt-get install webmin</li>
+
+    </strong>
+</ul>   
+
+
+    <script src="js/jquery.js"></script>
+</body>
+</html>
